@@ -15,20 +15,20 @@ int countChar(const char* text, char target)
 	return count;
 }
 
- char mostFrequentChar(const char* text)
- {
-	 std::map<char, int> dictionary;
-	 char mostFrequent = '\0';
-	 int count = 0;
+char mostFrequentChar(const char* text)
+{
+	std::map<char, int> dictionary;
+	char mostFrequent = '\0';
+	int count = 0;
 
-	 for (int i = 0; text[i] != '\0'; i++)
-	 {
-		 dictionary[text[i]]++;
-		 if (dictionary[text[i]] > count)
-		 {
-			 count = dictionary[text[i]];
-			 mostFrequent = text[i];
-		 }
-	 }
-	 return mostFrequent;
- }
+	for (int i = 0; text[i] != '\0'; i++)
+	{
+		dictionary[text[i]]++;
+		if (dictionary[text[i]] > count)
+		{
+			count = dictionary[text[i]];
+			mostFrequent = text[i];
+		}
+	}
+	return mostFrequent;
+}
